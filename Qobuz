@@ -43,3 +43,4 @@ DOMAIN-SET,quobuz.fr,REJECT
 DOMAIN-SET,static-qobuz.com,REJECT
 IP-CIDR,52.211.1.180/32,no-resolve
 IP-CIDR,99.81.97.56/32,no-resolve
+URL-REGEX,https?:\/\/www\.qobuz\.com\/api\.json\/0\.2\/user\/login$ url script-request-body https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Qobuz/JS/QobuzHiResProCrack.js,REJECT
