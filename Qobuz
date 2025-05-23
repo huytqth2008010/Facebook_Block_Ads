@@ -1,0 +1,45 @@
+[General]
+# Bỏ qua hệ thống proxy của thiết bị, cho phép công cụ tự quản lý lưu lượng mạng.
+bypass-system = true
+# Không áp dụng proxy cho các địa chỉ IP nội bộ (private IP ranges) và các tên miền cục bộ (localhost, *.local). Điều này đảm bảo các thiết bị trong mạng nội bộ không bị ảnh hưởng.
+skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local
+# Loại trừ các dải IP nội bộ khỏi chế độ TUN (mạng ảo). Các lưu lượng đến các địa chỉ này sẽ không đi qua VPN hoặc proxy.
+tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
+# Sử dụng DNS server của AdGuard (94.140.14.14 và 94.140.15.15) để phân giải tên miền. Đây là DNS chặn quảng cáo, giúp lọc các tên miền quảng cáo ngay từ bước phân giải DNS.
+dns-server = 94.140.14.14, 94.140.15.15
+
+[Rule]
+# Quy tắc chặn domain quảng cáo tĩnh
+DOMAIN-SET,cobeuz.fr,REJECT
+DOMAIN-SET,cobuz.fr,REJECT
+DOMAIN-SET,cobuzz.fr,REJECT
+DOMAIN-SET,kobuz.fr,REJECT
+DOMAIN-SET,qobuz.at,REJECT
+DOMAIN-SET,qobuz.be,REJECT
+DOMAIN-SET,qobuz.biz,REJECT
+DOMAIN-SET,qobuz.ca,REJECT
+DOMAIN-SET,qobuz.ch,REJECT
+DOMAIN-SET,qobuz.co.uk,REJECT
+DOMAIN-SET,qobuz.com,REJECT
+DOMAIN-SET,qobuz.de,REJECT
+DOMAIN-SET,qobuz.eu,REJECT
+DOMAIN-SET,qobuz.fi,REJECT
+DOMAIN-SET,qobuz.fr,REJECT
+DOMAIN-SET,qobuz.gr,REJECT
+DOMAIN-SET,qobuz.hk,REJECT
+DOMAIN-SET,qobuz.info,REJECT
+DOMAIN-SET,qobuz.it,REJECT
+DOMAIN-SET,qobuz.lt,REJECT
+DOMAIN-SET,qobuz.lu,REJECT
+DOMAIN-SET,qobuz.net,REJECT
+DOMAIN-SET,qobuz.org,REJECT
+DOMAIN-SET,qobuz.pl,REJECT
+DOMAIN-SET,qobuz.ro,REJECT
+DOMAIN-SET,qobuz.se,REJECT
+DOMAIN-SET,qobuz.tv,REJECT
+DOMAIN-SET,qobuz.us,REJECT
+DOMAIN-SET,quobuz.com,REJECT
+DOMAIN-SET,quobuz.fr,REJECT
+DOMAIN-SET,static-qobuz.com,REJECT
+IP-CIDR,52.211.1.180/32,no-resolve
+IP-CIDR,99.81.97.56/32,no-resolve
